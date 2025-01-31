@@ -1,0 +1,55 @@
+#include<stdio.h>
+int main(){
+    int deposit,withdraw,minbalance,num;
+    minbalance = 1000;
+    void greed(){
+        printf("----Welcome Canara Bank----\n");
+        printf("1.Deposit\n");
+        printf("2.Withdraw\n");
+        printf("3.Balance\n");
+        printf("4.Exit\n");
+        num = printf("Enter the process number : ");
+        scanf("%d", &num);
+    }
+    printf("----Welcome Canara Bank----\n");
+        printf("1.Deposit\n");
+        printf("2.Withdraw\n");
+        printf("3.Balance\n");
+        printf("4.Exit\n");
+    num = printf("Enter the process number : ");
+    scanf("%d", &num);
+    if(num >= 1 && num <= 4){
+        while(num){
+            
+            if(num == 1){
+                deposit = printf("Enter the deposit amount : ");
+                scanf("%d", &deposit);
+                minbalance += deposit;
+                printf("Amount successfully deposit in your account\n");
+                greed();
+                
+                
+            }
+            if(num == 2){
+                withdraw = printf("Enter the withdraw amount : ");
+                scanf("%d", &withdraw);
+                minbalance -= withdraw;
+                printf("Amount successfully withdraw from your account\n");
+                greed();
+            }
+            if(num == 3){
+                printf("Balance : %d\n",minbalance);
+                greed();
+            }
+            else{
+                printf("Thank you !!! visit again");
+                break;
+                
+            }
+        }
+        
+    }
+    else{
+            printf("Enter valid process number");
+        }
+}
